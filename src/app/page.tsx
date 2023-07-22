@@ -1,13 +1,18 @@
 // Server Component Data Fetching
 import TodoItem from "@/components/TodoItem";
+import { prisma } from "@/db";
 import Link from "next/link";
 
+// async function getTodosApi() {
+//   const response = await fetch("https://api.npoint.io/d10f48c054a181439c5a");
+//   if (!response.ok) {
+//     throw new Error("failed to fetch");
+//   }
+//   return response.json();
+// }
+
 async function getTodos() {
-  const response = await fetch("https://api.npoint.io/d10f48c054a181439c5a");
-  if (!response.ok) {
-    throw new Error("failed to fetch");
-  }
-  return response.json();
+  return prisma.todo.findMany();
 }
 
 export default async function Home() {
@@ -25,7 +30,7 @@ export default async function Home() {
         </Link>
       </header>
       <ul>
-        {todos?.todos?.map((todo: any) => (
+        {todos?.map((todo: any) => (
           <TodoItem key={todo.id} {...todo} />
         ))}
       </ul>
