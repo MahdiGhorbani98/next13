@@ -2,6 +2,7 @@
 import TodoItem from "@/components/TodoItem";
 import { prisma } from "@/db";
 import Link from "next/link";
+import styles from "./page.module.scss";
 
 // async function getTodosApi() {
 //   const response = await fetch("https://api.npoint.io/d10f48c054a181439c5a");
@@ -35,7 +36,7 @@ export default async function Home() {
           New
         </Link>
       </header>
-      <ul>
+      <ul className={`${styles.myPage}`}>
         {todos?.map((todo: any) => (
           <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
         ))}
