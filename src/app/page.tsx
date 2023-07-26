@@ -1,8 +1,8 @@
 // Server Component Data Fetching
-import TodoItem from "@/components/TodoItem";
-import { prisma } from "@/db";
-import Link from "next/link";
-import styles from "./page.module.scss";
+import TodoItem from '@/components/TodoItem';
+import { prisma } from '@/db';
+import Link from 'next/link';
+import styles from './page.module.scss';
 
 // async function getTodosApi() {
 //   const response = await fetch("https://api.npoint.io/d10f48c054a181439c5a");
@@ -17,7 +17,7 @@ function getTodos() {
 }
 
 async function toggleTodo(id: string, complete: boolean) {
-  "use server";
+  'use server';
 
   await prisma.todo.update({ where: { id }, data: { complete } });
 }
