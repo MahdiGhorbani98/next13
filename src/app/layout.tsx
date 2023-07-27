@@ -1,11 +1,11 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css';
+import type { Metadata } from 'next';
+import { cuprum } from './fonts';
+import { vazir } from './fonts';
+import { amiri } from './fonts';
 
 export const metadata: Metadata = {
-  title: "Todo App",
+  title: 'Todo App',
 };
 
 export default function RootLayout({
@@ -14,11 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${inter.className} bg-slate-800 text-slate-100 container mx-auto p-4`}
-      >
+    <html lang="en" className={`${cuprum.className}`}>
+      <body className={` bg-slate-800 text-slate-100 container mx-auto p-4`}>
         {children}
+        <p className="font-serif">salam</p>
+        <p className={vazir.className}>سلام وزیری</p>
+        <p className={amiri.className}>سلام امیری</p>
       </body>
     </html>
   );
