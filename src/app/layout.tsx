@@ -14,12 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cuprum.className}`}>
+    <html lang="en" className={`${cuprum.variable}`}>
       <body className={` bg-slate-800 text-slate-100 container mx-auto p-4`}>
         {children}
-        <p className="font-serif">salam</p>
-        <p className={vazir.className}>سلام وزیری</p>
-        <p className={amiri.className}>سلام امیری</p>
+        <p>salam</p>
+        <div className={`${vazir.className}`}>سلام وزیر</div>
+        <p>Hi</p>
       </body>
     </html>
   );

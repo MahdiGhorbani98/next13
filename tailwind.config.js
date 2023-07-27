@@ -27,8 +27,8 @@ module.exports = {
       loose: '2.4',
     },
     fontFamily: {
-      sans: ['var(--font-family-rajdhani)', 'Vazirmatn', 'sans-serif'],
-      serif: ['var(--font-family-rajdhani)', 'Vazirmatn', 'serif'],
+      sans: ['var(--font-family-cuprum)', 'Vazirmatn', 'sans-serif'],
+      serif: ['var(--font-family-cuprum)', 'Vazirmatn', 'serif'],
     },
     screens: {
       mobile: '560px',
