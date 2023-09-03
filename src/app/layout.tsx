@@ -17,9 +17,9 @@ export default function RootLayout({
     <html lang="en" className={`${cuprum.variable}`}>
       <body className={` bg-slate-800 text-slate-100 container mx-auto p-4`}>
         {children}
-        <p>salam</p>
+        {/* <p>salam</p>
         <div className={`${vazir.className}`}>سلام وزیر</div>
-        <p>Hi</p>
+        <p>Hi</p> */}
       </body>
     </html>
   );
