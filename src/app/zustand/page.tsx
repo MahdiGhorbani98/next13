@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useBearStore } from '@/store/BearStore';
 
 const Zustand = () => {
@@ -10,12 +10,16 @@ const Zustand = () => {
       removeAllBears: state.removeAllBears,
     }),
   );
+  const [bearsCount, setBearsCount] = useState<number>();
+  useEffect(() => {
+    setBearsCount(bears);
+  }, [bears]);
 
   return (
     <div>
       <section>
         <h1>Hi Zustand</h1>
-        <p>bears: {bears}</p>
+        <p>bears: {bearsCount}</p>
         <button
           className="bg-white text-black px-4"
           onClick={increasePopulation}
